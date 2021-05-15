@@ -23,7 +23,7 @@ async def start(client, message):
     await message.reply_text(
         text=f"Hello {message.from_user.first_name},\nIm telegram to telegra.ph image uploader bot by Danuma Project",
         disable_web_page_preview=True
-        buttons = [
+                buttons = [
         [
             InlineKeyboardButton
                 (
@@ -36,6 +36,7 @@ async def start(client, message):
                 )
         ],
         ]
+
     )
 
 
