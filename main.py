@@ -21,7 +21,7 @@ TGraph = Client(
 @TGraph.on_message(filters.command("start"))
 async def start(client, message):
     await message.reply_text(
-        text=f"Hello {message.from_user.first_name},\nIm telegram to telegra.ph image uploader bot by @danumabots",
+        text=f"Hello {message.from_user.first_name},\nIm telegram to telegra.ph image uploader bot by @danumabots[Channel](buttonurl=https://t.me/danumabots)[Owner](buttonurl=https://t.me/Lasi99X)",
         disable_web_page_preview=True
           )
 
@@ -32,9 +32,9 @@ async def getimage(client, message):
     if not os.path.isdir(tmp):
         os.makedirs(tmp)
     img_path = os.path.join(tmp, str(uuid.uuid4()) + ".jpg")
-    dwn = await message.reply_text("Downloading to my server...", True)
+    dwn = await message.reply_text("Dlownoading...🚀", True)
     img_path = await client.download_media(message=message, file_name=img_path)
-    await dwn.edit_text("Uploading as telegra.ph link...")
+    await dwn.edit_text("Generating your Link...🚀")
     try:
         response = upload_file(img_path)
     except Exception as error:
