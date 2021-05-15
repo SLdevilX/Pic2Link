@@ -21,10 +21,9 @@ TGraph = Client(
 @TGraph.on_message(filters.command("start"))
 async def start(client, message):
     await message.reply_text(
-        text=f"Hello {message.from_user.first_name},\nIm telegram to telegra.ph image uploader bot by @W4RR10R",
-        disable_web_page_preview=True.
-         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Channel", url=f"https://t.me/danumabots"), InlineKeyboardButton(text="Owner", url=f"https://t.me/Lasi99X")]])
-    )
+        text=f"Hello {message.from_user.first_name},\nIm telegram to telegra.ph image uploader bot by @danumabots",
+        disable_web_page_preview=True
+          )
 
 
 @TGraph.on_message(filters.photo)
